@@ -1,5 +1,9 @@
 # 💬 CHAT APPLICATION WITH SDL INTEGRATION  
 
+![Platform](https://img.shields.io/badge/platform-Windows-blue)  
+![Language](https://img.shields.io/badge/language-C-brightgreen)  
+![SDL2](https://img.shields.io/badge/SDL2-2.0.22-orange)  
+
 > A modern, simple, and fun chat app built in **C**, featuring:
 > - ⚡ **Winsock** for networking (Windows)
 > - 🎨 **SDL2** for a smooth graphical interface
@@ -29,27 +33,23 @@
 
 ---
 
-### 1️⃣ Server
-```bash
-# Compile
+## 🛠 Compile & Run (Server + Client)
+
+```powershell
+# ---------------------------
+# 1. Compile & Run the Server
+# ---------------------------
 gcc server.c -o server -lws2_32
+server.exe
 
-# Run
-./server.exe
-
-2️⃣ Client
-bash
-Copy
-Edit
-# Compile object file
-gcc -g -c client.c -Isrc/Include -Lsrc/lib \
+# ---------------------------
+# 2. Compile & Run the Client
+# ---------------------------
+gcc -g -c client.c -Isrc/Include -Lsrc/lib `
 -lmingw32 -lSDL2main -lSDL2_image -lSDL2_ttf -lSDL_mixer -lSDL2
 
-# Link executable
-gcc -g -o client.exe client.o -Isrc/Include -Lsrc/lib \
+gcc -g -o client.exe client.o -Isrc/Include -Lsrc/lib `
 -lmingw32 -lSDL2main -lSDL2_image -lSDL2_ttf -lSDL2_mixer -lSDL2 -lws2_32
 
-# Run
-./client.exe
-
+client.exe
 
