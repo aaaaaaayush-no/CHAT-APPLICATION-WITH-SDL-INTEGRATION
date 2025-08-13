@@ -5,3 +5,7 @@ gcc -g -o client.exe client.o -Isrc/Include -Lsrc/lib -lmingw32 -lSDL2main -lSDL
 
 compile server with:
 gcc server.c -o server -lws2_32
+
+
+
+make sure to change the ip address according to your internet ipv4
